@@ -1,4 +1,3 @@
-// Problem of async JS 
 
 // const getData = (arg) => {
 //     console.log('getData called');
@@ -10,6 +9,7 @@
 //     console.log(data.city);
 // });
 
+// =====================
 // problem of async js 
 // =====================
 
@@ -24,6 +24,7 @@
 // // const output = undefined;
 // console.log(output.city);
 
+// // =====================
 // // solution 1 - callback 
 // // =====================
 
@@ -41,9 +42,9 @@
 //     console.log(data.city);
 // });
 
-
+// ====================
 // solution 2 - Promise  
-// =====================
+// ====================
 
 console.log("Start");
 
@@ -65,8 +66,9 @@ getData()
     .catch((error) => { console.log(error.message); });
 
 
-// solution 3 - async / await   
-// =====================
+// ==========================
+// solution 3 - async / await
+// ==========================
 
 
 
