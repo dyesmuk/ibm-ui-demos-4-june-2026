@@ -2,9 +2,11 @@
 
 const getData = (arg) => {
     console.log('getData called');
-    // fetched data 
     arg({ city: 'Bengaluru' });
 };
 
-getData(() => { });
+getData((data) => {
+    console.log('anonymous function called.');
+    console.log(data.city);
+});
 
