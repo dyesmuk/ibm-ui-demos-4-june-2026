@@ -24,16 +24,32 @@
 // fun(() => { console.log('abc'); });
 
 
+// function [passed as arg ] to another function
 
+// const fun = (arg) => {
+//     console.log('fun function called.');
+//     arg();
+// };
 
-const fun = (arg) => {
-    console.log('fun function called.');
-    arg();
-};
+// fun(() => { console.log('anonymous function called.'); });
 
-fun(() => { console.log('anonymous function called.'); });
+// const passedFun = () => { console.log('named function called.'); };
+// fun(passedFun);
 
-const passedFun = () => { console.log('named function called.'); };
-fun(passedFun);
+// const fun = (arg) => {
+//     console.log('fun function called.');
+//     arg();
+// };
 
+// fun(() => { console.log('anonymous function called.'); });
 
+// setTimeout(arg1, arg2);
+// setTimeout(() => { }, timeout);
+
+// console.log("One");
+
+// setTimeout(() => {
+//     console.log("Two");
+// }, 2000);
+
+// console.log("Three");
