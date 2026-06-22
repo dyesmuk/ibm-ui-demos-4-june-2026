@@ -97,19 +97,19 @@
 // // console.log(arr);
 
 
-// object in js 
+// // object in js 
 
-const employee = {
-    firstName: 'Sonu',
-    lastName: 'Joshi',
-    salary: 10.25,
-    address: { pin: 500001, city: 'Pune' },
-    isIndian: true,
-    phones: [9876543210, 6789012345],
-    print: () => { }
-};
+// const employee = {
+//     firstName: 'Sonu',
+//     lastName: 'Joshi',
+//     salary: 10.25,
+//     address: { pin: 500001, city: 'Pune' },
+//     isIndian: true,
+//     phones: [9876543210, 6789012345],
+//     print: () => { }
+// };
 
-// console.log(employee);
-console.log(employee.firstName);
-console.log(employee.address.city);
-console.log(employee.phones[1]);
+// // console.log(employee);
+// console.log(employee.firstName);
+// console.log(employee.address.city);
+// console.log(employee.phones[1]);
