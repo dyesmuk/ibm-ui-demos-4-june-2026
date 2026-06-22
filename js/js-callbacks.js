@@ -42,7 +42,7 @@
 // });
 
 
-// solution 1 - Promise  
+// solution 2 - Promise  
 // =====================
 
 console.log("Start");
@@ -63,3 +63,15 @@ const getData = () => {
 getData()
     .then((response) => { console.log(response.city); })
     .catch((error) => { console.log(error.message); });
+
+
+// solution 3 - async / await   
+// =====================
+
+
+
+
+
+
+
+
