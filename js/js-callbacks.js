@@ -27,6 +27,8 @@
 // solution 1 - callback 
 // =====================
 
+console.log("Start");
+
 const getData = (arg) => {
     console.log('getData called');
     setTimeout(() => {
