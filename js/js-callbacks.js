@@ -9,9 +9,9 @@
 //     console.log(data.city);
 // });
 
-// =====================
-// problem of async js 
-// =====================
+// // =====================
+// // problem of async js 
+// // =====================
 
 // const getData = () => {
 //     console.log('getData called');
@@ -42,9 +42,33 @@
 //     console.log(data.city);
 // });
 
-// ====================
-// solution 2 - Promise  
-// ====================
+// // ====================
+// // solution 2 - Promise  
+// // ====================
+
+// console.log("Start");
+
+// const getData = () => {
+//     console.log('getData called');
+//     const isDataAvailable = false; // true false 
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (isDataAvailable)
+//                 resolve({ city: 'Bengaluru' });
+//             else
+//                 reject({ message: 'Data not available' });
+//         }, 2000);
+//     });
+// };
+
+// getData()
+//     .then((response) => { console.log(response.city); })
+//     .catch((error) => { console.log(error.message); });
+
+
+// // ==========================
+// // solution 3 - Promise and async / await
+// // ==========================
 
 console.log("Start");
 
@@ -61,18 +85,17 @@ const getData = () => {
     });
 };
 
-getData()
-    .then((response) => { console.log(response.city); })
-    .catch((error) => { console.log(error.message); });
+const consumeData = async () => {
+    try {
+        const data = await getData();
+        console.log(data.city);
+    }
+    catch (error) {
+        console.log(error.message);
+    }
+};
 
-
-// ==========================
-// solution 3 - async / await
-// ==========================
-
-
-
-
+consumeData();
 
 
 
