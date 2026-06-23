@@ -29,8 +29,6 @@ const consumeRestApi = async () => {
     }
     catch (error) {
         console.error(error);
-
     }
-
 };
 consumeRestApi(); 
