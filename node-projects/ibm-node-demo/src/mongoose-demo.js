@@ -2,16 +2,15 @@ import { MongoClient } from 'mongodb';
 
 const uri = 'mongodb://localhost:27017';
 
-async function MongoDbCon() {
+const MongoDbCon = async () => {
 
     const client = new MongoClient(uri);
-
     try {
-        await client.connect();
+        await client.connect(); // connect to the server 
         console.log('Connected!');
-        const db = client.db('ibm-ems');
-        const employees = db.collection('emps');
-        const employeeList = await employees.find().toArray();
+        const db = client.db('ibm-ems'); // connect to the database 
+        const employees = db.collection('emps'); // connect to the collection (table)
+        const employeeList = await employees.find().toArray(); // perform CRUD ops 
         employeeList.forEach(e => console.log(e.name));
 
     } catch (error) {
