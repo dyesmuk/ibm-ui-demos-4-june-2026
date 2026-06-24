@@ -5,19 +5,19 @@
 import { calculateBonus, getEmployees, findEmployee, addNums } from './emp-stuff.js';
 
 beforeAll(() => {
-    console.log('runs once before all tests');
+    console.log('Setup - runs once before all tests');
 });
 
 afterAll(() => {
-    console.log('runs once after all tests');
+    console.log('Teardown - runs once after all tests');
 });
 
 beforeEach(() => {
-    console.log('runs before each test');
+    console.log('Setup - runs before each test');
 });
 
 afterEach(() => {
-    console.log('runs after each test');
+    console.log('Teardown - runs after each test');
 });
 
 describe('ems tests suite', () => {
