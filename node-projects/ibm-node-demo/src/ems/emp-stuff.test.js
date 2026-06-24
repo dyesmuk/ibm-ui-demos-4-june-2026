@@ -1,4 +1,6 @@
 // emp-tests.js
+// documentation of matchers - 
+// https://jestjs.io/docs/using-matchers
 
 import { calculateBonus, getEmployees, findEmployee, addNums } from './emp-stuff.js';
 
@@ -11,8 +13,12 @@ describe('ems tests suite', () => {
         });
 
         it('given id 1, name shoule NOT be Monu', () => {
-            expect(findEmployee(1).not.name).toBe('Monu');
+            expect(findEmployee(1).name).not.toBe('Monu');
         });
+        it('given id 100, should return undefined', () => {
+            expect(findEmployee(100)).toBeUndefined();
+        });
+
     });
 
 
