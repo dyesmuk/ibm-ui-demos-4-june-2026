@@ -1,9 +1,6 @@
 // emp-tests.js
 
-import {
-    calculateBonus,
-    applyHike,
-    getEmployees,
-    findEmployee
-} from './emp-stuff.js';
+import { calculateBonus, getEmployees, findEmployee, addNums } from './emp-stuff.js';
+
+
 

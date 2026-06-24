@@ -10,10 +10,6 @@ export const calculateBonus = (salary) => {
     return salary * 0.10;
 }
 
-export const applyHike = (salary, percentage) => {
-    return salary + (salary * percentage / 100);
-}
-
 export const getEmployees = () => {
     return employees.map(emp => emp.name);
 }
@@ -22,4 +18,4 @@ export const findEmployee = (id) => {
     return employees.find(emp => emp.id === id);
 }
 
-
+export const addNums = (a, b) => { return a + b; }; 
