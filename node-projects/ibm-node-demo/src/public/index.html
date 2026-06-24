@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Socket.IO Demo</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <h2>Socket.IO Demo</h2>
+
+    <div id="messages"></div>
+
+    <input id="messageInput" placeholder="Type message">
+    <button id="sendBtn">Send</button>
+
+    <script>
+        const socket = io();
+
+        const messagesDiv = document.getElementById('messages');
+        const input = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        sendBtn.addEventListener('click', () => {
+
+            const msg = input.value.trim();
+
+            if (msg) {
+                socket.emit('chat-message', msg);
+                input.value = '';
+            }
+        });
+
+        socket.on('chat-message', (msg) => {
+
+            const p = document.createElement('p');
+            p.textContent = msg;
+
+            messagesDiv.appendChild(p);
+
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+    </script>
+
+</body>
+
+</html>
