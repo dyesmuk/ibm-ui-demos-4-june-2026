@@ -23,22 +23,22 @@
         const sendBtn = document.getElementById('sendBtn');
 
         sendBtn.addEventListener('click', () => {
+            console.log('addEventListener button clicked.');
 
             const msg = input.value.trim();
 
             if (msg) {
                 socket.emit('chat-message', msg);
                 input.value = '';
+                console.log('message typed.');
             }
         });
 
         socket.on('chat-message', (msg) => {
-
+            console.log('message received.');
             const p = document.createElement('p');
             p.textContent = msg;
-
             messagesDiv.appendChild(p);
-
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         });
     </script>
