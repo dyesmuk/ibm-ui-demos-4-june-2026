@@ -9,6 +9,10 @@ const MongoDbCon = async () => {
         await client.connect(); // connect to the server 
         console.log('Connected!');
         const db = client.db('ibm-ems'); // connect to the database 
+        
+        const collectionList = await db.collections();
+        collectionList.forEach(c => console.log(c.collectionName));
+
         const employees = db.collection('emps'); // connect to the collection (table)
         const employeeList = await employees.find().toArray(); // perform CRUD ops 
         employeeList.forEach(e => console.log(e.name));
