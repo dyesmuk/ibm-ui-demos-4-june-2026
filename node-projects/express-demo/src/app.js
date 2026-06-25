@@ -14,9 +14,28 @@ app.get('/about', (req, res) => {
     res.send('About page');
 });
 
+// http://localhost:3000/employees
+
 app.get('/employees', (req, res) => {
-    console.log('about');
+    console.log('employees');
     res.send('Employees page');
+});
+
+// http://localhost:3000/employees/10
+// http://localhost:3000/employees/10?city=Mumbai
+// http://localhost:3000/employees/10?city=Mumbai&dept=hr
+
+app.get('/employees/:id', (req, res) => {
+    console.log(`employees/${req.params.id}`);
+    console.log(req.query);
+    // console.log(req);
+    console.log(req.body);
+    console.log(req.url);
+    // console.log(res);
+    res.status(200)
+        .json({ id: req.params.id, city: req.query.city, department: req.query.dept })
+        .send();
+    // res.send('Employee id page');
 });
 
 app.listen(PORT, () => {
