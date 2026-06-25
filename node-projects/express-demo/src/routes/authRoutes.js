@@ -4,6 +4,7 @@ import express from "express";
 import { generateToken } from '../utils/jwt.js';
 
 const router = express.Router();
+
 const appUser = { id: 1, username: 'user', password: 'pass' }
 
 router.post('/login', (req, res) => {

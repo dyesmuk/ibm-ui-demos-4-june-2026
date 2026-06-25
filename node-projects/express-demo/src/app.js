@@ -13,7 +13,6 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 
 app.use(auth);
-
 app.use('/employees', empRoutes);
 app.use('/app', demoRoutes);
 
