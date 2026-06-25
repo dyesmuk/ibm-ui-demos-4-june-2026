@@ -1,22 +1,45 @@
-import express from "express";
-import empRoutes from "./routes/empRoutes.js";
-import demoRoutes from "./routes/demoRoutes.js";
-import authRoutes from "./routes/authRoutes.js";
-import auth from "./middleware/auth.js";
+import express from 'express';
+import empRoutes from './routes/empRoutes.js';
+import demoRoutes from './routes/demoRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import passport from './config/passport.js';
 
 const app = express();
 
 app.use(express.json());
+app.use(passport.initialize()); // required — no sessions needed
 
-app.use("/auth", authRoutes);
-app.use("/demo", demoRoutes);
+app.use('/auth', authRoutes);
+app.use('/demo', demoRoutes);
 
-app.use(auth);
+// replaces your old auth middleware
+app.use(passport.authenticate('jwt', { session: false }));
 
-app.use("/employees", empRoutes);
-app.use("/app", demoRoutes);
+app.use('/employees', empRoutes);
+app.use('/app', demoRoutes);
 
 export default app;
+
+
+// import express from "express";
+// import empRoutes from "./routes/empRoutes.js";
+// import demoRoutes from "./routes/demoRoutes.js";
+// import authRoutes from "./routes/authRoutes.js";
+// import auth from "./middleware/auth.js";
+
+// const app = express();
+
+// app.use(express.json());
+
+// app.use("/auth", authRoutes);
+// app.use("/demo", demoRoutes);
+
+// app.use(auth);
+
+// app.use("/employees", empRoutes);
+// app.use("/app", demoRoutes);
+
+// export default app;
 
 
 // // app.js
