@@ -1,25 +1,57 @@
 // authRoutes.js
-
-import express from "express";
+import User from '../models/User.js';
+import express from 'express';
 import { generateToken } from '../utils/jwt.js';
 
 const router = express.Router();
 
-const appUser = { id: 1, username: 'user', password: 'pass' }
-
-router.post('/login', (req, res) => {
-    console.log(req.body);
+router.post('/login', async (req, res) => {
+    console.log(`login with ${req.body}`);
     const { username, password } = req.body;
-    if (username === appUser.username && password === appUser.password) {
-        const token = generateToken({
-            id: appUser.id,
-            username: appUser.username
-        });
-        res.status(200).json({ message: '', token });
+    const user = await User.findOne({ username });
+    if (!user) {
+        return res.status(401).json({ message: 'Invalid Username' });
     }
-    else {
-        return res.status(401).json({ message: 'Unauthorized!' });
+
+    if (user.password !== password) {
+        return res.status(401).json({ message: 'Invalid Password' });
+
     }
+    console.log(`valid credentials ${req.body}`);
+    const token = generateToken({
+        id: user._id,
+        username: user.username
+    });
+    res.status(200).json({ message: '', token });
 });
 
 export default router;
+
+
+// // authRoutes.js
+
+// import express from 'express';
+// import { generateToken } from '../utils/jwt.js';
+
+// const router = express.Router();
+
+// const appUser = { id: 1, username: 'user', password: 'pass' }
+
+// router.post('/login', (req, res) => {
+//     console.log(`login with ${req.body}`);
+//     const { username, password } = req.body;
+//     if (username === appUser.username && password === appUser.password) {
+//         console.log(`valid credentials ${req.body}`);
+//         const token = generateToken({
+//             id: appUser.id,
+//             username: appUser.username
+//         });
+//         res.status(200).json({ message: '', token });
+//     }
+//     else {
+//         console.log(`Invalid credentials`);
+//         return res.status(401).json({ message: 'Unauthorized!' });
+//     }
+// });
+
+// export default router;

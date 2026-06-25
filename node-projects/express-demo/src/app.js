@@ -4,17 +4,20 @@ import empRoutes from './routes/empRoutes.js';
 import demoRoutes from './routes/demoRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import auth from './middleware/auth.js';
+import connectDB from './config/db.js';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-app.use('/auth', authRoutes);
+app.use('/auth', authRoutes); // login 
+app.use('/demo', demoRoutes); // unprotected endpoints 
+app.use(auth); // authorization 
+app.use('/employees', empRoutes); // protected endpoints
+app.use('/app', demoRoutes); // protected endpoints
 
-app.use(auth);
-app.use('/employees', empRoutes);
-app.use('/app', demoRoutes);
+await connectDB();
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -137,3 +140,4 @@ app.listen(PORT, () => {
 // // // app.get(arg1, arg2);
 // // // app.listen(PORT);
 // // // app.listen(arg1, [arg2]);
+

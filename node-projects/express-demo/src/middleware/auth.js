@@ -2,6 +2,7 @@
 import { verifyToken } from '../utils/jwt.js';
 
 const auth = (req, res, next) => {
+    console.log(`auth with ${req.headers.authorization}`);
     const authHeader = req.headers.authorization;
     if (!authHeader) {
         return res.status(401).json({ message: 'Authorization header missing' });
