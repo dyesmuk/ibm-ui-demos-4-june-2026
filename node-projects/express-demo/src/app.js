@@ -7,12 +7,11 @@ import passport from './config/passport.js';
 const app = express();
 
 app.use(express.json());
-app.use(passport.initialize()); // required — no sessions needed
+app.use(passport.initialize());
 
 app.use('/auth', authRoutes);
 app.use('/demo', demoRoutes);
 
-// replaces your old auth middleware
 app.use(passport.authenticate('jwt', { session: false }));
 
 app.use('/employees', empRoutes);
