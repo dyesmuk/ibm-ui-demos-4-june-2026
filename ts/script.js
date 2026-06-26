@@ -4,5 +4,8 @@
 // // // int num = 10;
 let salary = 90000.25;
 console.log(salary);
-salary = 'abc';
+// salary = 'abc';
 console.log(salary);
+salary = 98000.50;
+console.log(salary);
+
