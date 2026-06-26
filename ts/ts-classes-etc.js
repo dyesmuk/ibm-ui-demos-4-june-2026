@@ -4,19 +4,19 @@ class Animal {
     name;
     species;
     // #sound: string;     // true private (ES2022 field)
-    sound; // true private (ES2022 field)
+    // private sound: string;     // true private (ES2022 field)
     #hashField;
     constructor(name, species, hf) {
         this.id = Math.random();
         this.name = name;
         this.species = species;
         this.#hashField = hf;
-        this.sound = 'generic';
+        // this.sound = 'generic';
     }
 }
 const anml1 = new Animal('dog', 'dog specie', 'hashvalue');
-anml1.sound = 'another value';
-anml1.#hashField = 'abc';
+// anml1.sound = 'another value';
+// anml1.#hashField = 'abc';
 console.log(anml1);
 // class Animal {
 //     readonly id: number;

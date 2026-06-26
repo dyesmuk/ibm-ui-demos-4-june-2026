@@ -11,12 +11,12 @@ class Animal {
         this.name = name;
         this.species = species;
         this.#hashField = hf;
-        this.sound = 'generic';
+        // this.sound = 'generic';
     }
 }
 const anml1 = new Animal('dog', 'dog specie', 'hashvalue');
-anml1.sound = 'another value';
-anml1.#hashField = 'abc';
+// anml1.sound = 'another value';
+// anml1.#hashField = 'abc';
 console.log(anml1);
 
 

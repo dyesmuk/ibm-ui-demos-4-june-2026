@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Engineering",
+    "location": "Bangalore"
+  },
+  {
+    "id": 2,
+    "name": "HR",
+    "location": "Mumbai"
+  },
+  {
+    "id": 3,
+    "name": "Operations",
+    "location": "Chennai"
+  }
+]

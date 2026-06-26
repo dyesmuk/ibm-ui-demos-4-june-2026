@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "role": "manager",
+    "salary": 90000,
+    "status": "active",
+    "departmentId": 1,
+    "email": "alice@ems.com"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "role": "engineer",
+    "salary": 70000,
+    "status": "active",
+    "departmentId": 1
+  },
+  {
+    "id": 3,
+    "name": "Carol",
+    "role": "engineer",
+    "salary": 68000,
+    "status": "on-leave",
+    "departmentId": 1
+  },
+  {
+    "id": 4,
+    "name": "David",
+    "role": "hr",
+    "salary": 55000,
+    "status": "active",
+    "departmentId": 2,
+    "email": "david@ems.com"
+  },
+  {
+    "id": 5,
+    "name": "Eva",
+    "role": "intern",
+    "salary": 20000,
+    "status": "active",
+    "departmentId": 3
+  },
+  {
+    "id": 8,
+    "name": "Helen",
+    "role": "manager",
+    "salary": 74000,
+    "status": "active",
+    "departmentId": 1
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "role": "manager",
+      "salary": 90000,
+      "status": "active",
+      "departmentId": 1,
+      "email": "alice@ems.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "role": "engineer",
+      "salary": 70000,
+      "status": "active",
+      "departmentId": 1
+    },
+    {
+      "id": 3,
+      "name": "Carol",
+      "role": "engineer",
+      "salary": 68000,
+      "status": "on-leave",
+      "departmentId": 1
+    },
+    {
+      "id": 4,
+      "name": "David",
+      "role": "hr",
+      "salary": 55000,
+      "status": "active",
+      "departmentId": 2,
+      "email": "david@ems.com"
+    },
+    {
+      "id": 5,
+      "name": "Eva",
+      "role": "intern",
+      "salary": 20000,
+      "status": "active",
+      "departmentId": 3
+    },
+    {
+      "id": 8,
+      "name": "Helen",
+      "role": "manager",
+      "salary": 74000,
+      "status": "active",
+      "departmentId": 1
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Engineering",
+      "location": "Bangalore"
+    },
+    {
+      "id": 2,
+      "name": "HR",
+      "location": "Mumbai"
+    },
+    {
+      "id": 3,
+      "name": "Operations",
+      "location": "Chennai"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Payroll Automation",
+      "budget": 500000,
+      "employeeIds": [
+        1,
+        2,
+        3,
+        8
+      ],
+      "deadline": "2025-12-31T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Employee Portal",
+      "budget": 300000,
+      "employeeIds": [
+        1,
+        4,
+        5
+      ],
+      "deadline": "2024-06-30T00:00:00.000Z"
+    }
+  ],
+  "savedAt": "2026-06-26T10:46:56.429Z"
+}

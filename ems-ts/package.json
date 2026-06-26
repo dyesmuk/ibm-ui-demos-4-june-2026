@@ -1,0 +1,21 @@
+{
+  "name": "ems-ts",
+  "version": "1.0.0",
+  "description": "Employee Management System — TypeScript assignments (IBM Full Stack Developer Program)",
+  "main": "src/assignment5.ts",
+  "scripts": {
+    "a1": "ts-node src/assignment1.ts",
+    "a2": "ts-node src/assignment2.ts",
+    "a3": "ts-node src/assignment3.ts",
+    "a4": "ts-node src/assignment4.ts",
+    "a5": "ts-node src/assignment5.ts"
+  },
+  "keywords": ["typescript", "ems", "training"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
