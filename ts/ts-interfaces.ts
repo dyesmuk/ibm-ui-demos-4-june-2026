@@ -9,11 +9,10 @@ interface User {
     };
 }
 
-const user1 = {
+const user1: User = {
     id: 1,
     name: 'Sonu',
-    email: 'a@b.c',
-    phone: 123
+    email: 'a@b.c'
 };
 
 console.log(user1);
